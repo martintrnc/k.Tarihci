@@ -6,42 +6,58 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>614</height>
+    <width>1140</width>
+    <height>603</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="baslik_label">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>40</y>
-      <width>491</width>
-      <height>31</height>
+      <x>170</x>
+      <y>30</y>
+      <width>791</width>
+      <height>81</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Black</family>
-      <pointsize>17</pointsize>
-     </font>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
     </property>
-    <property name="text">
-     <string> Etkinlik ve Bilet Satış Platformu</string>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
+    <widget class="QLabel" name="baslik_label">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>20</y>
+       <width>491</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>17</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>İŞ TAKİP VE YÖNETİM SİSTEMİ</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
    </widget>
    <widget class="QLineEdit" name="arama_yap_line_edit">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>170</y>
-      <width>751</width>
+      <x>180</x>
+      <y>160</y>
+      <width>741</width>
       <height>20</height>
      </rect>
     </property>
@@ -50,8 +66,8 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>230</y>
-      <width>741</width>
+      <y>210</y>
+      <width>1091</width>
       <height>281</height>
      </rect>
     </property>
@@ -74,27 +90,42 @@
     </column>
     <column>
      <property name="text">
-      <string>Etkinlik Adı</string>
+      <string>Proje Adı</string>
      </property>
     </column>
     <column>
      <property name="text">
-      <string>Mekan</string>
+      <string>Proje Sorumlusu</string>
      </property>
     </column>
     <column>
      <property name="text">
-      <string>Bilet Sayısı</string>
+      <string>Çalışan İşçi Sayısı</string>
      </property>
     </column>
     <column>
      <property name="text">
-      <string>Bilet Fiyatı</string>
+      <string>Proje Durumu</string>
      </property>
     </column>
     <column>
      <property name="text">
-      <string>Tarih</string>
+      <string>Maliyet</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Şirket</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Proje Başlangıç Tarihi</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Proje Bitiş Tarihi</string>
      </property>
     </column>
    </widget>
@@ -104,34 +135,28 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1140</width>
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuSe_enekler">
+   <widget class="QMenu" name="kitap_duzenleme_menu">
     <property name="title">
      <string>Seçenekler</string>
     </property>
-    <addaction name="bilet_satin_al_sayfa"/>
-    <addaction name="etkinlik_duzenle_sayfa"/>
-    <addaction name="satilan_biletler_sayfa"/>
+    <addaction name="separator"/>
+    <addaction name="proje_ekleme_sayfa"/>
    </widget>
-   <addaction name="menuSe_enekler"/>
+   <addaction name="kitap_duzenleme_menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="bilet_satin_al_sayfa">
+  <action name="actionKitap_D_zenleme_Sayfas">
    <property name="text">
-    <string>Bilet Satın Al</string>
+    <string>Kitap DÜzenleme  Sayfası</string>
    </property>
   </action>
-  <action name="etkinlik_duzenle_sayfa">
+  <action name="proje_ekleme_sayfa">
    <property name="text">
-    <string>Etkinlik Düzenle</string>
-   </property>
-  </action>
-  <action name="satilan_biletler_sayfa">
-   <property name="text">
-    <string>Satılan Biletler</string>
+    <string>Proje Ekleme</string>
    </property>
   </action>
  </widget>
